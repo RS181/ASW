@@ -1,0 +1,184 @@
+/*
+   CSS styling examples for the Vaadin app.
+
+   Visit https://vaadin.com/docs/styling/application-theme/ for more information.
+*/
+
+/* Example: CSS class name to center align the content . */
+.centered-content {
+  margin: 0 auto;
+  max-width: 250px;
+}
+
+/* Example: the style is applied only to the textfields which have the `bordered` class name. */
+vaadin-text-field.bordered::part(input-field) {
+  box-shadow: inset 0 0 0 1px var(--lumo-contrast-30pct);
+  background-color: var(--lumo-base-color);
+}
+
+a[highlight] {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.highlight_blue {
+  border: blue solid 5px;
+}
+
+.highlight_red {
+  border: red solid 5px;
+}
+
+.highlight_green {
+  border: green solid 5px;
+}
+
+.highlight_orange {
+  border: orange solid 5px;
+}
+
+.holding_item{
+  box-shadow: rgba(46, 252, 0, 0.55) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+:root {
+  --bottom-layout: 120pt;
+
+  --contour-color: lime;
+  --character-contour-color: lightpink;
+  --passage-contour-color: white;
+  --item-contour-color: lightblue;
+
+  --scene-positionable-size: 120px;
+  --inventory-item-size: 70px;
+  --holding-item: 100px;
+
+  --scroll-height: 600px;
+}
+
+.bottom-layout-height {
+  height: var(--bottom-layout);
+  max-height: var(--bottom-layout);
+}
+
+.bottom-layout-width {
+  width: var(--bottom-layout);
+  max-width: var(--bottom-layout);
+}
+
+.bottom-layout-height-subbed {
+  height: var(--bottom-layout) - 10pt;
+  max-height: var(--bottom-layout) - 10pt;
+}
+
+.bottom-layout-height-added {
+  height: var(--bottom-layout) + 10pt;
+  max-height: var(--bottom-layout) + 10pt;
+}
+
+.bottom-layout-width-subbed {
+  width: var(--bottom-layout) - 10pt;
+  max-width: var(--bottom-layout) - 10pt;
+}
+
+.positionable-img {
+  -webkit-filter: drop-shadow(2px 2px 0 var(--contour-color))
+  drop-shadow(-2px 2px 0 var(--contour-color))
+  drop-shadow(2px -2px 0 var(--contour-color))
+  drop-shadow(-2px -2px 0 var(--contour-color));
+
+  filter: drop-shadow(2px 2px 0 var(--contour-color))
+  drop-shadow(-2px 2px 0 var(--contour-color))
+  drop-shadow(2px -2px 0 var(--contour-color))
+  drop-shadow(-2px -2px 0 var(--contour-color));
+}
+
+.character-positionable-img {
+  -webkit-filter: drop-shadow(2px 2px 0 var(--character-contour-color))
+  drop-shadow(-2px 2px 0 var(--character-contour-color))
+  drop-shadow(2px -2px 0 var(--character-contour-color))
+  drop-shadow(-2px -2px 0 var(--character-contour-color));
+
+  filter: drop-shadow(2px 2px 0 var(--character-contour-color))
+  drop-shadow(-2px 2px 0 var(--character-contour-color))
+  drop-shadow(2px -2px 0 var(--character-contour-color))
+  drop-shadow(-2px -2px 0 var(--character-contour-color));
+}
+
+.item-positionable-img {
+  -webkit-filter: drop-shadow(2px 2px 0 var(--item-contour-color))
+  drop-shadow(-2px 2px 0 var(--item-contour-color))
+  drop-shadow(2px -2px 0 var(--item-contour-color))
+  drop-shadow(-2px -2px 0 var(--item-contour-color));
+
+  filter: drop-shadow(2px 2px 0 var(--item-contour-color))
+  drop-shadow(-2px 2px 0 var(--item-contour-color))
+  drop-shadow(2px -2px 0 var(--item-contour-color))
+  drop-shadow(-2px -2px 0 var(--item-contour-color));
+}
+
+.scene-positionable-max-size {
+  max-width: var(--scene-positionable-size);
+  max-height: var(--scene-positionable-size);
+}
+
+.scene-positionable-size {
+  width: var(--scene-positionable-size);
+  height: var(--scene-positionable-size);
+}
+
+.scene-positionable-size-added {
+  width: var(--scene-positionable-size) + 10px;
+  height: var(--scene-positionable-size) + 10px;
+}
+
+.inventory-item-size {
+  width: var(--inventory-item-size);
+  height: var(--inventory-item-size);
+}
+
+.inventory-item-max-size {
+  max-width: var(--inventory-item-size);
+  max-height: var(--inventory-item-size);
+}
+
+.inventory-item-size-added {
+  width: var(--inventory-item-size) + 10px;
+  height: var(--inventory-item-size) + 10px;
+}
+
+.inventory-holding-item-size {
+  width: 100px;
+  height: 100px;
+}
+
+.scroll-panel{
+  max-width: 450px;
+  width: 450px;
+  min-width: 450px;
+
+  min-height: 100%;
+  height: var(--scroll-height);
+  max-height: var(--scroll-height);
+
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.scene-panel{
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.msg-list{
+  width: 100%;
+  min-width: 100%;
+  overflow: scroll;
+  max-height: 500px;
+  height: 500px;
+}
+
+.chat-panel{
+  margin: 0;
+  padding: 0;
+}
